@@ -3,12 +3,12 @@
     <head>
         <title>Title</title>
         <link href="style1.css" rel="stylesheet">
-        <link href="Verticalstyle.css" rel="stylesheet">
+        <link href="verstyle.css" rel="stylesheet">
     </head>
     <body>
         <nav class="top-menu">
             <ul class="menu-main">
-                <li><a href="MAIN.html" class="current">Home</a></li>
+                <li><a href="MAIN.html">Home</a></li>
                 <li><a href="SE.html">SE</a></li>
                 <li><a href="CS.html">CS</a></li>
                 <li><a href="BDA.html">BDA</a></li>
@@ -16,15 +16,23 @@
                 <li><a href="MT.html">MT</a></li>
             </ul>
         </nav>
-        <div class="widget">
-            <h3 class="widget-title">Main</h3>
-            <ul class="widget-list">
-                <li><a href="MainWebsite.html">Website</a></li>
-                <li><a href="MainOurgoal.html">Our_goal</a></li>
-                <li><a href="MainHelp.html">Help</a></li>
-            </ul>
+        <div id="mySidenav" class="sidenav">
+            <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">x</a>
+            <a href="About.html">About</a>
+            <a href="Services.html">Services</a>
+            <a href="Clients.html">Clients</a>
+            <a href="Contact.html">Contact</a>
         </div>
-        <h1>Main</h1>
-        <p>HTML-элемент предназначен для основного контента (содержимого) документа (страницы).<br>Основной контент состоит из контента, который непосредственно относится к главной теме документа или её развивает.</p>
+        <div class="main">
+            <span style="font-size:30px;cursor:pointer" onclick="openNav()">☰</span>
+        </div>
+        <script>
+            function openNav() {
+                document.getElementById("mySidenav").style.width = "250px";
+            }
+            function closeNav() {
+                document.getElementById("mySidenav").style.width = "0";
+            }
+        </script>
     </body>
 </html>
